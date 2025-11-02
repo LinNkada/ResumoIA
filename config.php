@@ -1,9 +1,9 @@
 <?php
-// Conexão com MySQL
+
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "resumos_ia"; // nome correto do banco
+$dbname = "resumos_ia";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {

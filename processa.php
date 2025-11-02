@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif (strlen($texto) > 5000) {
         $erro = "Erro: Texto muito longo (máximo 5000 caracteres).";
     } else {
+        
         // Código de requisição à API
         $url = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn";
         $data = json_encode([
