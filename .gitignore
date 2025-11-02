@@ -1,0 +1,49 @@
+# Configurações do sistema e IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Composer
+/vendor/
+composer.lock
+
+# Arquivos de log
+*.log
+logs/
+*.cache
+
+# Arquivos de ambiente (variáveis secretas)
+.env
+config.local.php
+*.local.php
+
+# Cache e arquivos temporários
+*.tmp
+*.temp
+tmp/
+cache/
+*.bak
+*.swp
+
+# Arquivos de backup
+*~
+*.backup
+
+# Node / Frontend (caso use)
+node_modules/
+dist/
+build/
+
+# Sessoes e upload temporário
+sessions/
+uploads/
+
+# Outros arquivos que não devem ir para o repositório
+*.sql
+*.sqlite
+*.db
+
+config.local.php
+.env
+
