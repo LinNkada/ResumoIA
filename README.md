@@ -1,5 +1,3 @@
-# ResumoIA
-
 # Gerador de Resumos com IA
 
 **API de IA Utilizada**: Hugging Face Inference API (modelo facebook/bart-large-cnn para resumo de texto).
