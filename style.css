@@ -1,3 +1,189 @@
-body { font-family: Arial, sans-serif; margin: 20px; }
-textarea { width: 100%; height: 150px; }
-button { padding: 10px; background: #007bff; color: white; border: none; cursor: pointer; }
+:root {
+    --primary-color: #1e3a8a; /* Azul navy escuro */
+    --secondary-color: #1f2937; /* Cinza escuro */
+    --accent-color: #10b981; /* Verde esmeralda para sucesso */
+    --error-color: #ef4444; /* Vermelho para erros */
+    --text-color: #f9fafb; /* Branco quase puro para texto */
+    --bg-color: #111827; /* Fundo muito escuro */
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais forte para contraste */
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, var(--bg-color), #374151); /* Gradiente escuro */
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.header {
+    background: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: var(--shadow);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.site-description {
+    margin-top: 1rem;
+    font-size: 1rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.erro {
+    background: var(--error-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+}
+
+form {
+    background: var(--secondary-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 1rem;
+    border: 1px solid #4b5563; /* Borda cinza escura */
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+    background: #374151; /* Fundo escuro para textarea */
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(30, 58, 138, 0.5);
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background: #1d4ed8; /* Azul um pouco mais claro no hover */
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background: #6b7280; /* Cinza desabilitado */
+    cursor: not-allowed;
+    transform: none;
+}
+
+.resumo, .historico {
+    background: var(--secondary-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.resumo h2, .historico h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.resumo-texto {
+    background: var(--accent-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #374151; /* Fundo ligeiramente diferente para itens */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-color);
+}
+
+.original, .resumo-item {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--text-color);
+}
+
+.footer {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid #4b5563;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    .container {
+        padding: 0 0.5rem;
+    }
+    form, .resumo, .historico {
+        padding: 1rem;
+    }
+    .site-description {
+        font-size: 0.9rem;
+    }
+}
